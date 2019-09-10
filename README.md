@@ -21,3 +21,16 @@ dopedez Platform repository
       Создать Service Account jane в Namespace dev;
       Дать jane роль admin в рамках Namespace dev;
       Создать Service Account ken в Namespace dev;
+# 3rd-homework:
+    - Добавление проверок для pod/web
+    - Создание deployment ./kubernetes-network/web-deploy.yaml
+    - Создание сервисов ./kubernetes-network/web-svc-cip/yaml 
+    - Cluster IP |
+                 %host% ssh ; sudo -i ; iptables --list -nv -t nat 
+                 KUBE-SVC - service
+                 KUBE-SEP - Service Endpoint
+                 for more information chek https://msazure.club/kubernetes-services-and-iptables/
+    - Включение IPVS |
+                for more information check https://github.com/kubernetes/kubernetes/blob/master/pkg/proxy/ipvs/README.md
+    - Ingress |
+                for more information https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal                
